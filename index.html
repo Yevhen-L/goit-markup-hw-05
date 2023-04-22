@@ -52,7 +52,19 @@
     <section class="hero">
       <div class="hero-box container">
         <h1 class="hero-text">Effective Solutions for Your Business</h1>
-        <button type="button" class="btn-hero">Order Service</button>
+        <button data-modal-open class="btn-hero" type="button" >Order Service</button>
+      </div>
+
+
+      <!-- MODAL WINDOW -->
+      <div data-modal class="backdrop is-hidden">
+        <div class="modal-window">
+          <button data-modal-close class="modal-btn-close" type="button">
+            <svg class="modal-icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-cross"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <!-- FUTURES -->

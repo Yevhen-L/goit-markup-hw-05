@@ -121,7 +121,7 @@ button {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: var(--z-1000);
+  z-index: var(--z-100);
   background-color: var(--brand-color-white);
   border-bottom: 1px solid var(--brand-color-cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -720,4 +720,61 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+/**
+   |============================
+   | MODAL WINDOW
+   |============================
+ */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(46, 47, 66, 0.4);
+  z-index: var(--z-1000);
+}
+.modal-window {
+  position: absolute;
+
+  /* transform: scaleX(0.75);
+  transform: scaleY(1.25); */
+
+  top: 88px;
+  left: calc(50% - 204px);
+  width: 408px;
+  height: 576px;
+  background: var(--brand-color-dairy);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+}
+.modal-btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  border-radius: 50%;
+  fill: var(--brand-color-navy);
+  background: var(--brand-color-cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  background-color: var(--brand-color-ocean);
+  fill: var(--brand-color-white);
+}
+
+.modal-icon-close {
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: 0;
 }
