@@ -177,6 +177,9 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
   position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-header:hover,
 .nav-header:focus {
@@ -218,6 +221,9 @@ button {
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-header:hover,
 .address-header:focus {
@@ -280,16 +286,20 @@ button {
   height: 56px;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  font-size: 16px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-hero:hover,
 .btn-hero:focus {
   background-color: var(--brand-color-ocean);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
@@ -470,6 +480,9 @@ button {
   justify-content: center;
   width: 100%;
   height: 100%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -520,10 +533,16 @@ button {
   display: flex;
   justify-content: center;
   padding: 16px 0;
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
   fill: currentColor;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon:hover,
@@ -587,6 +606,9 @@ button {
   height: 100%;
   border-radius: 50%;
   background-color: var(--brand-color-iris);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-box-icons-footer:hover,
 .social-box-icons-footer:focus {
@@ -641,6 +663,9 @@ button {
   padding: 12px 24px;
   border: 1px solid var(--brand-color-cornflower);
   border-radius: 4px;
+  transition-property: color, background-color, border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -694,6 +719,9 @@ button {
 .img-portfolio {
   width: 360px;
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .img-portfolio:hover,
 .img-portfolio:focus {
@@ -737,10 +765,6 @@ button {
 }
 .modal-window {
   position: absolute;
-
-  /* transform: scaleX(0.75);
-  transform: scaleY(1.25); */
-
   top: 88px;
   left: calc(50% - 204px);
   width: 408px;
@@ -762,6 +786,9 @@ button {
   fill: var(--brand-color-navy);
   background: var(--brand-color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:hover,
