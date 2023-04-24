@@ -810,6 +810,7 @@ button {
 .modal-btn-close:hover,
 .modal-btn-close:focus {
   background-color: var(--brand-color-ocean);
+  border: var(--brand-color-ocean);
   fill: var(--brand-color-white);
 }
 /* .modal-icon-close {} */
