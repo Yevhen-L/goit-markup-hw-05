@@ -803,14 +803,14 @@ button {
   fill: var(--brand-color-navy);
   background: var(--brand-color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition-property: background-color, fill;
+  transition-property: border, background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn-close:hover,
 .modal-btn-close:focus {
   background-color: var(--brand-color-ocean);
-  border: var(--brand-color-ocean);
+  border: 1px solid var(--brand-color-ocean);
   fill: var(--brand-color-white);
 }
 /* .modal-icon-close {} */
