@@ -18,6 +18,7 @@
 
   /* animation */
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-slow: 1000ms easi-in-out;
 
   /* fonnts */
   --primary-font-roboto: "Roboto", sans-serif;
@@ -180,6 +181,12 @@ button {
 .nav-header:focus {
   color: var(--brand-color-ocean);
 }
+/* .nav-link-item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  color: var(--brand-color-ocean);
+} */
 .nav-header::after {
   content: "";
   width: 100%;
@@ -190,10 +197,11 @@ button {
   left: 0;
   bottom: -1px;
 }
-.nav-header.current::after
-/* .nav-header:hover::after,
-.nav-header:focus::after */ {
+.nav-header.current::after {
   background: var(--brand-color-ocean);
+}
+.nav-header.current {
+  color: var(--brand-color-ocean);
 }
 
 /* ADDRESS */
@@ -287,7 +295,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
-  transition-property: color, background-color, box-shadow;
+  transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -639,7 +647,8 @@ button {
   letter-spacing: 0.02em;
   color: var(--brand-color-cloud);
 }
-.portfolio-img-frame:hover .pop-up-txt-card {
+.portfolio-img-frame:hover .pop-up-txt-card,
+.img-portfolio:focus .pop-up-txt-card {
   transform: translateY(0);
 }
 /**
@@ -770,13 +779,16 @@ button {
   bottom: 0;
   background: rgba(46, 47, 66, 0.4);
   z-index: var(--z-1000);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transition: opacity 250ms ease, visibility 250ms ease;
 }
 .modal-window {
   position: absolute;
-  top: 88px;
-  left: calc(50% - 204px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 408px;
   height: 576px;
   background: var(--brand-color-dairy);
@@ -784,13 +796,18 @@ button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 24px;
-  transition-property: background-color, transform, box-shadow;
-  transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0, 0.35, 0.75, 1.93);
+  transition: transform 300ms ease-in 200ms, opacity 300ms ease-in 200ms;
+  transform: translate(-50%, -50%) scale(1, 1);
 }
-.modal-window:hover {
-  transform: scale(102%);
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(1.5, 1.5);
+  opacity: 0;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 250ms;
 }
 .modal-btn-close {
   display: flex;
